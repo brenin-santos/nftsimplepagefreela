@@ -1,0 +1,314 @@
+.section-down-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-down-section-connect{
+  width: 100%;
+  max-width: 400px;
+
+  cursor: pointer;
+}
+
+.section--button-mint{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.section-down-section-name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 4rem;
+  position: relative;
+}
+.card-button {
+  width: 270px;
+  height: 40px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 2rem;
+
+  align-items: center;
+}
+.image-down-header {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 3rem;
+}
+.button-down-section {
+  width: 220px;
+  height: 100%;
+  margin-top: 2rem;
+  background: #f62d58;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #f62d58;
+  transition: 0.2s;
+  border-radius: 0.5rem;
+}
+.button-down-section:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+.section-down-section-button {
+  width: 400px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.image-footer {
+  height: 300px;
+  position: absolute;
+
+  bottom: 0;
+}
+.card-wallet-address {
+  width: 500px;
+  height: 60px;
+  background: white;
+  display: flex;
+
+  border-radius: 0.5rem;
+
+  justify-content: center;
+  align-items: center;
+}
+.wallet-name {
+  color: #0855b6;
+}
+.card-input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-negative {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+
+  padding: 0;
+  border: 0;
+  transition: 0.2s;
+}
+
+.card-negative:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+.card-positive {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+
+  padding: 0;
+  border: 0;
+  transition: 0.2s;
+}
+.card-positive:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+.card-input-number {
+  height: 100%;
+  width: 130px;
+  display: flex;
+  color: #1965c2;
+  font-weight: bold;
+  font-size: 15px;
+
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+}
+.button-down-section-connect {
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+
+}
+
+.container-inputs-buttons {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.card-supply {
+  width: 150px;
+  height: 60px;
+
+  background-color: white;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  width: 100;
+  height: 20px;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(254, 202, 202);
+  background: rgb(254, 242, 242);
+  font-size: 16px;
+  font-weight: bold;
+  word-break: break-all;
+
+  color: red;
+  font-weight: 400;
+
+  position: absolute;
+  right: 10rem;
+  top: 4rem;
+}
+
+.card-middle-screen {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.etherscan-icon {
+  height: 30px;
+  width: 30px;
+}
+.card-image-update {
+  background-color: white;
+  margin-top: 5rem;
+  border-radius: 0.25rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.connect-wallet{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 24px;
+  background-image: url("../../assets/connect_wallet.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: transparent;
+}
+
+.wallet-address{
+  margin-bottom: 2.5rem;
+  max-width: 300px;
+  font-family: 'Silkscreen', sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  display: block;
+
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.connect-wallet-button{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Silkscreen', sans-serif;
+
+  font-weight: 900;
+  color: #000;
+  border: 0;
+  max-width: 300px;
+  
+  background-color: transparent;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+ 
+  cursor: pointer;
+}
+
+.disconnect{
+  color: red;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'Silkscreen', sans-serif;
+
+  margin-top: 10px;
+
+  cursor: pointer;
+}
+
+.AllTokens{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: 'Silkscreen', sans-serif;
+
+  .AllTokens--name{
+    margin-top: 2rem;
+  }
+}
+
+.button--mint{
+  width: 400px;
+  height: 100px;
+  max-width: 100%;
+  border: 0;
+  font-weight: 900;
+  font-size: 42px;
+  color: #008000c4;
+  
+  background-image: url("../../assets/mint_button.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: transparent;
+
+
+}
+
+.button--mint:disabled{
+  background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+  color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+  border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
+}
