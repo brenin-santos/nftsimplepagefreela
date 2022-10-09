@@ -19,7 +19,7 @@ const LayoutDefault = () => {
 
   const { ethers } = require("ethers");
   const contractABI = require("../../contract-abi.json");
-  const contractAddress = "0x92e954c294ca960B9DDc1c5950729e54e5c24a90";
+  const contractAddress = "0x931d46a2a3e591a9fee23ccbf976a26532c1db87";
 
   useEffect(() => {
     async function fetchData() {
@@ -158,7 +158,7 @@ const LayoutDefault = () => {
               <small className="wallet-address">{walletAddress}</small>
             </section>
             <section className="AllTokens">
-              {totalSupply !== maxSupply ? (
+              {totalSupply === maxSupply ? (
                 <p className="AllTokens--name">All tokens are Minted</p>
               ) : (
                 <>
