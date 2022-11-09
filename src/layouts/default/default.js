@@ -12,6 +12,7 @@ const LayoutDefault = () => {
   const [status, setStatus] = useState("");
 
   const [quantity, setQuantity] = useState(1);
+  const [limit,setLimit] = useState(5);
   const [maxSupply, setMaxSupply] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
   const [error, setError] = useState("");
@@ -162,6 +163,21 @@ const LayoutDefault = () => {
                 <p className="AllTokens--name">All tokens are Minted</p>
               ) : (
                 <>
+                  <div className="card-input">
+                  <button
+                    className="card-button-add-neg"
+                    onClick={() => quantity > 1 && setQuantity(quantity - 1)}
+                  >
+                    -
+                  </button>
+                  <div >{quantity}</div>
+                  <button
+                    className="card-button-add-neg"
+                    onClick={() => quantity < limit && setQuantity(quantity + 1)}
+                  >
+                    +
+                  </button>
+                </div>
                   <p className="AllTokens--name">Open to Mint</p>
                   <p className="AllTokens--name">Price: {price} ETH</p>
                 </>
@@ -170,13 +186,7 @@ const LayoutDefault = () => {
             <section className="section--button-mint">
               <button
                 className="button--mint"
-                disabled={() => {
-                  if (totalSupply === maxSupply) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                }}
+                onClick={() => mintTokens(quantity)}
               >
                 {totalSupply === maxSupply ? "Sold Out" : "Mint"}
               </button>
@@ -189,10 +199,10 @@ const LayoutDefault = () => {
             </section>
           </>
         ) : (
-          <div class="connect-wallet">
+          <div className="connect-wallet">
             <button
               type="button"
-              class="connect-wallet-button"
+              className="connect-wallet-button"
               onClick={() => {
                 connectWalletPressed();
               }}
