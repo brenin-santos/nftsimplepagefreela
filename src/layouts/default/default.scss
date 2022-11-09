@@ -219,10 +219,7 @@
   gap: 0.5rem;
 }
 
-.etherscan-icon {
-  height: 30px;
-  width: 30px;
-}
+
 .card-image-update {
   background-color: white;
   margin-top: 5rem;
@@ -250,8 +247,9 @@
 }
 
 .wallet-address{
-  margin-bottom: 2.5rem;
-  max-width: 300px;
+  margin: 2.5rem 0;
+  max-width: 100%;
+  text-align: center;
   font-family: 'Silkscreen', sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -326,3 +324,15 @@
   color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
   border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
 }
+
+.section--icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom:3rem;
+
+ 
+}
+
+

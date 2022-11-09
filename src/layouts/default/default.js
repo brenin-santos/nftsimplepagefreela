@@ -12,7 +12,7 @@ const LayoutDefault = () => {
   const [status, setStatus] = useState("");
 
   const [quantity, setQuantity] = useState(1);
-  const [limit,setLimit] = useState(5);
+  const [limit, setLimit] = useState(5);
   const [maxSupply, setMaxSupply] = useState(0);
   const [totalSupply, setTotalSupply] = useState(0);
   const [error, setError] = useState("");
@@ -155,29 +155,31 @@ const LayoutDefault = () => {
         </section>
         {walletAddress !== "" ? (
           <>
-            <section className="connect-wallet">
-              <small className="wallet-address">{walletAddress}</small>
-            </section>
+            <div className="connect-wallet" />
+            <small className="wallet-address">{walletAddress}</small>
+
             <section className="AllTokens">
               {totalSupply === maxSupply ? (
                 <p className="AllTokens--name">All tokens are Minted</p>
               ) : (
                 <>
                   <div className="card-input">
-                  <button
-                    className="card-button-add-neg"
-                    onClick={() => quantity > 1 && setQuantity(quantity - 1)}
-                  >
-                    -
-                  </button>
-                  <div >{quantity}</div>
-                  <button
-                    className="card-button-add-neg"
-                    onClick={() => quantity < limit && setQuantity(quantity + 1)}
-                  >
-                    +
-                  </button>
-                </div>
+                    <button
+                      className="card-button-add-neg"
+                      onClick={() => quantity > 1 && setQuantity(quantity - 1)}
+                    >
+                      -
+                    </button>
+                    <div>{quantity}</div>
+                    <button
+                      className="card-button-add-neg"
+                      onClick={() =>
+                        quantity < limit && setQuantity(quantity + 1)
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
                   <p className="AllTokens--name">Open to Mint</p>
                   <p className="AllTokens--name">Price: {price} ETH</p>
                 </>
@@ -196,6 +198,21 @@ const LayoutDefault = () => {
               <p>
                 {totalSupply}/{maxSupply}
               </p>
+            </section>
+            <section className="section--icons">
+              <img src="img/etherscan.png" alt="Etherscan logo" />
+
+              <img
+                src="img/opensea.png"
+                alt="Opensea logo"
+                className="opensea-icon"
+              />
+
+              <img
+                src="img/twitter.png"
+                alt="Twitter logo"
+                className="twitter-icon"
+              />
             </section>
           </>
         ) : (
