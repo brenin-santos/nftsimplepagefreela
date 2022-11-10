@@ -133,12 +133,39 @@ const LayoutDefault = () => {
     );
     const tokenPrice = await contract.cost();
 
-    try {
-      await contract.mint(mintAmount, {
-        value: tokenPrice.mul(mintAmount),
-      });
-    } catch (e) {
-      setError(e.code);
+    const balanceOf = await contract.balanceOf(contractAddress);
+
+    const newBalanceOf = ethers.utils.formatEther(balanceOf._hex);
+
+    const quantityOfMints = "0.000000000000000001";
+
+    console.log(newBalanceOf);
+    console.log(newBalanceOf < quantityOfMints && quantity > 1);
+
+    if (newBalanceOf < quantityOfMints && quantity > 1) {
+      try {
+        await contract.mint(mintAmount - 1, {
+          value: tokenPrice.mul(mintAmount),
+        });
+      } catch (e) {
+        setError(e.code);
+      }
+    } else if (newBalanceOf < quantityOfMints && quantity == 1) {
+      try {
+        await contract.mint(mintAmount, {
+          value: 0,
+        });
+      } catch (e) {
+        setError(e.code);
+      }
+    } else {
+      try {
+        await contract.mint(mintAmount, {
+          value: tokenPrice.mul(mintAmount),
+        });
+      } catch (e) {
+        setError(e.code);
+      }
     }
   };
 
