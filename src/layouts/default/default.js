@@ -20,7 +20,7 @@ const LayoutDefault = () => {
 
   const { ethers } = require("ethers");
   const contractABI = require("../../contract-abi.json");
-  const contractAddress = "0x931d46a2a3e591a9fee23ccbf976a26532c1db87";
+  const contractAddress = "";
 
   useEffect(() => {
     async function fetchData() {
